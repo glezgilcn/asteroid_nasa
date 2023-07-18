@@ -1,0 +1,211 @@
+html {
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+.modal-container {
+  width: 310px;
+  height: fit-content;
+  position: absolute;
+  left: 50%;
+  top: 50%; 
+  margin-left: -150px;
+  margin-top: -150px;
+  z-index: 1;
+  color: white;
+  font-family: 'Trispace', sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+  border-radius: 20px;
+  text-align: justify;
+  background-color: rgba(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-container h1{
+  font-size: 24px;
+  margin: 12px 24px 12px 24px;
+}
+
+.modal-container p {
+  margin: 0 24px 12px 24px;
+}
+
+.modal-container button {
+  font-family: 'Trispace', sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+  border: 0;
+  border-radius: 5px;
+  padding: 8px;
+  width: 120px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.earth-img {
+  width: 100vw;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-top: -100px;
+  animation: rotation 400s infinite linear;
+  border-radius: 50%;
+}
+
+.asteroids-container {
+  position: relative;
+  width: 100%;
+}
+
+.asteroid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  /*animation: moving 70s linear infinite;
+  animation-direction: alternate;*/
+}
+
+.asteroid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.asteroid p {
+  color: white;
+  font-family: 'Trispace', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.asteroid-img{
+  width: 50px;
+  height: auto;
+  animation: rotation 40s infinite linear;
+}
+
+.asteroid-img2{
+  width: 50px;
+  height: auto;
+  animation: rotation2 50s infinite linear;
+}
+
+.asteroid-info-container {
+  width: 300px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.asteroid-info-img {
+  width: 50%;
+  height: auto;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.asteroid-info-container p {
+  line-height: 20px;
+  padding: 0;
+  margin: 0 0 0 40px;
+  font-family: 'Trispace', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.asteroid-info-container button {
+  margin-bottom: 16px;
+  border-radius: 20px;
+  padding: 12px;
+  background-color: black;
+  color: white;
+  box-shadow: 3px 3px 3px grey;
+  cursor: pointer;
+}
+
+@media (min-width: 200px) {
+  .earth-img {
+    margin-top: -200px;
+  }
+}
+
+@media (min-width: 400px) {
+  .earth-img {
+    margin-top: -300px;
+  }
+}
+
+@media (min-width: 600px) {
+  .earth-img {
+    margin-top: -500px;
+  }
+  .asteroid-img,
+  .asteroid-img2 {
+    width: 70px
+  }
+}
+
+@media (min-width: 800px) {
+  .earth-img {
+    margin-top: -700px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .earth-img {
+    margin-top: -900px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .earth-img {
+    margin-top: -1000px;
+  }
+  .asteroid-img,
+  .asteroid-img2 {
+    width: 100px
+  }
+}
+
+@media (min-width: 1200px) {
+  .earth-img {
+    margin-top: -1100px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .earth-img {
+    margin-top: -1200px;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation2 {
+  from {
+    transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
